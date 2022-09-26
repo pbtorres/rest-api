@@ -6,8 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserService } from './users/services/user.service';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { NgxMaskModule } from 'ngx-mask';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
     HttpClientModule,
     FormsModule,
     NgxMaskModule.forRoot(),
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
